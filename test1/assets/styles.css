@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #7a7a7a;
+  --button-bg: #000;
+  --button-text: #fff;
+  --icon-size: 20px;
+  --border-radius: 10px;
+  --font-size-lg: 45px;
+  --font-size-md: 22px;
+  --font-size-sm: 15px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  margin: 20px 0;
+}
+
+p {
+  font-size: var(--font-size-md);
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* Сетка кнопок */
+.buttons-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 15px;
+  margin: 0 auto 40px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 15px;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.icon-black {
+  width: var(--icon-size);
+  height: auto;
+  filter: invert(100%);
+  margin-right: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 36px;
+  }
+
+  p {
+      font-size: 18px;
+  }
+
+  .profile-photo {
+      width: 150px;
+      height: 150px;
+  }
+
+  .buttons-grid {
+      width: 90%;
+  }
+
+  .button {
+      padding: 12px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 28px;
+  }
+
+  p {
+      font-size: 16px;
+  }
+
+  .profile-photo {
+      width: 120px;
+      height: 120px;
+  }
+
+  .buttons-grid {
+      width: 100%;
+  }
+
+  .button {
+      padding: 10px;
+      font-size: 13px;
+  }
+}
